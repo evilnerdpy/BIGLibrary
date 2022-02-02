@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.biglibrary.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_findBookFragment"
+            app:destination="@id/findBookFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findBookFragment"
+        android:name="com.example.biglibrary.FindBookFragment"
+        android:label="fragment_find_book"
+        tools:layout="@layout/fragment_find_book" >
+        <action
+            android:id="@+id/action_findBookFragment_to_bookInfoFragment"
+            app:destination="@id/bookInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.example.biglibrary.AddBookFragment"
+        android:label="fragment_add_book"
+        tools:layout="@layout/fragment_add_book" />
+    <fragment
+        android:id="@+id/bookInfoFragment"
+        android:name="com.example.biglibrary.BookInfoFragment"
+        android:label="fragment_book_info"
+        tools:layout="@layout/fragment_book_info" >
+        <action
+            android:id="@+id/action_bookInfoFragment_to_editBookFragment"
+            app:destination="@id/editBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editBookFragment"
+        android:name="com.example.biglibrary.EditBookFragment"
+        android:label="fragment_edit_book"
+        tools:layout="@layout/fragment_edit_book" />
+</navigation>
