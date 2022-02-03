@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android_projects/BIGLibrary/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/android_projects/BIGLibrary/app/src/main/res/layout/book_item_rec_view.xml" value="0.4" />
+        <entry key="..\:/android_projects/BIGLibrary/app/src/main/res/layout/book_rec_view_item.xml" value="0.136" />
         <entry key="..\:/android_projects/BIGLibrary/app/src/main/res/layout/fragment_add_book.xml" value="0.1265625" />
         <entry key="..\:/android_projects/BIGLibrary/app/src/main/res/layout/fragment_book_info.xml" value="0.1265625" />
         <entry key="..\:/android_projects/BIGLibrary/app/src/main/res/layout/fragment_edit_book.xml" value="0.13020833333333334" />

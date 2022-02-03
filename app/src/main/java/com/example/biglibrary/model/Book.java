@@ -3,10 +3,11 @@ package com.example.biglibrary.model;
 import java.util.ArrayList;
 
 public class Book {
-    private String bookTitle,bookAuthor, bookYearOfPublishing,bookTimeOfAdding,aboutBook;
+    private String bookID, bookTitle,bookAuthor, bookYearOfPublishing,bookTimeOfAdding,aboutBook;
     private ArrayList<String> bookTags;
 
-    public Book(String bookTitle, String bookAuthor, String bookYearOfPublishing, String bookTimeOfAdding, String aboutBook, ArrayList<String> bookTags) {
+    public Book(String bookID,String bookTitle, String bookAuthor, String bookYearOfPublishing, String bookTimeOfAdding, String aboutBook, ArrayList<String> bookTags) {
+        this.bookID = bookID;
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
         this.bookYearOfPublishing = bookYearOfPublishing;
