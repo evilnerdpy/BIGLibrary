@@ -9,14 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.biglibrary.model.Book;
-import com.example.biglibrary.model.BooksService;
+
 
 import java.util.ArrayList;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
-    private BooksService booksService;
-    BookAdapter(BooksService books){
-        booksService = books;
+    private ArrayList<String> books;
+    BookAdapter(ArrayList<String> books){
+        this.books = books;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -42,14 +42,14 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull BookAdapter.ViewHolder holder, int position) {
-        holder.bookTitle.setText(String.valueOf(booksService.getBooks().get(position).getBookTitle()));
-        holder.bookAuthor.setText(String.valueOf(booksService.getBooks().get(position).getBookAuthor()));
-        holder.bookYearOfPublishing.setText(String.valueOf(booksService.getBooks().get(position).getBookYearOfPublishing()));
+//        holder.bookTitle.setText(String.valueOf(booksService.getBooks().get(position).getBookTitle()));
+//        holder.bookAuthor.setText(String.valueOf(booksService.getBooks().get(position).getBookAuthor()));
+//        holder.bookYearOfPublishing.setText(String.valueOf(booksService.getBooks().get(position).getBookYearOfPublishing()));
     }
 
     @Override
     public int getItemCount() {
-        return booksService.getBooks().size();
+        return books.size();
     }
 
 

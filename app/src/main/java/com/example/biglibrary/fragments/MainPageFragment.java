@@ -1,4 +1,4 @@
-package com.example.biglibrary;
+package com.example.biglibrary.fragments;
 
 
 import android.os.Bundle;
@@ -14,8 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.example.biglibrary.BookAdapter;
+import com.example.biglibrary.R;
 import com.example.biglibrary.model.Book;
-import com.example.biglibrary.model.BooksService;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -24,7 +26,7 @@ import java.util.ArrayList;
 public class MainPageFragment extends Fragment {
     private FloatingActionButton addBookButton, findBookButton;
     private RecyclerView recyclerView;
-    private BooksService booksService;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,9 +58,9 @@ public class MainPageFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.book_rec_view);
 
-        BookAdapter adapter = new BookAdapter(booksService);
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        recyclerView.setAdapter(adapter);
+//        BookAdapter adapter = new BookAdapter();
+//        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+//        recyclerView.setAdapter(adapter);
 
         return  view;
     }
@@ -73,11 +75,6 @@ public class MainPageFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        booksService = new BooksService();
-        ArrayList<String> tags = new ArrayList<>();
-        tags.add("some tag");
-        booksService.addBook(new Book("id", "Some title", "some author",
-                "2002", "2020-1-1","SomeInfoAboutBook",tags));
 
     }
 

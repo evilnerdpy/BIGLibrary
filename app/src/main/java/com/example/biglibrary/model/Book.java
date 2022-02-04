@@ -1,66 +1,31 @@
 package com.example.biglibrary.model;
 
-import java.util.ArrayList;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+
+
+@Entity(tableName = "books")
 public class Book {
-    private String bookID, bookTitle,bookAuthor, bookYearOfPublishing,bookTimeOfAdding,aboutBook;
-    private ArrayList<String> bookTags;
+   @PrimaryKey(autoGenerate = true)
+   @ColumnInfo(name = "id")
+   public int bookId;
 
-    public Book(String bookID,String bookTitle, String bookAuthor, String bookYearOfPublishing, String bookTimeOfAdding, String aboutBook, ArrayList<String> bookTags) {
-        this.bookID = bookID;
-        this.bookTitle = bookTitle;
-        this.bookAuthor = bookAuthor;
-        this.bookYearOfPublishing = bookYearOfPublishing;
-        this.bookTimeOfAdding = bookTimeOfAdding;
-        this.aboutBook = aboutBook;
-        this.bookTags = bookTags;
-    }
+   @ColumnInfo(name = "book_title")
+   public String bookTitle;
 
-    public String getBookYearOfPublishing() {
-        return bookYearOfPublishing;
-    }
+    @ColumnInfo(name = "book_author")
+    public String bookAuthor;
 
-    public void setBookYearOfPublishing(String bookYearOfPublishing) {
-        this.bookYearOfPublishing = bookYearOfPublishing;
-    }
+    @ColumnInfo(name = "book_year_of_publishing")
+    public String bookYearOfPublishing;
 
-    public String getBookTimeOfAdding() {
-        return bookTimeOfAdding;
-    }
+    @ColumnInfo(name = "book_time_of_adding")
+    public String bookTimeOfAdding;
 
-    public void setBookTimeOfAdding(String bookTimeOfAdding) {
-        this.bookTimeOfAdding = bookTimeOfAdding;
-    }
+    @ColumnInfo(name = "book_aboutBook")
+    public String about_book;
 
-    public String getAboutBook() {
-        return aboutBook;
-    }
 
-    public void setAboutBook(String aboutBook) {
-        this.aboutBook = aboutBook;
-    }
-
-    public ArrayList<String> getBookTags() {
-        return bookTags;
-    }
-
-    public void setBookTags(ArrayList<String> bookTags) {
-        this.bookTags = bookTags;
-    }
-
-    public String getBookAuthor() {
-        return bookAuthor;
-    }
-
-    public void setBookAuthor(String bookAuthor) {
-        this.bookAuthor = bookAuthor;
-    }
-
-    public String getBookTitle() {
-        return bookTitle;
-    }
-
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
-    }
 }
